@@ -1,0 +1,37 @@
+<div id="outer">
+    <div id ="inner"><div style="background-color: #ccc">
+    <h1>Currency History  </h1> </div></div>
+<div id ="inner"></div><button (click) =' logOut()'>Log out</button>
+<br>
+</div>
+  
+<div  >  
+        <table   style="text-align: center"  border="1" >  
+            <thead >  
+                <tr>  
+                    <th>Currency </th>  
+                    <th>Month 1</th>  
+                    <th>Month 2</th>  
+                    <th>Month 3</th>  
+                    <th>Month 4</th> 
+                    <th>Month 5</th> 
+                    <th>Month 6</th>  
+                </tr>  
+            </thead>  
+            <tbody>  
+                <ng-container  *ngFor="let history of historyList ">
+                 <tr>  
+                    <td>{{history.base}}</td>  
+                    <ng-container  *ngFor="let rate of history.rate ">
+                    <td> {{rate}}</td>
+                    </ng-container>
+                   
+                  </tr>   
+                </ng-container>
+            </tbody> 
+        </table>  
+    </div>  
+    
+
+   
+   
